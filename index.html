@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turab — Game Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">Turab</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#game-projects">Games</a></li>
+      <li><a href="#code-projects">GitHub</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-name">Turab</h1>
+      <p class="hero-title"><span id="typedText"></span><span class="cursor">|</span></p>
+      <p class="hero-bio">Game developer, C++ programmer, and game dev mentor. I build games, teach others how to, and enjoy the process.</p>
+      <div class="hero-buttons">
+        <a href="#game-projects" class="btn btn-primary">View Games</a>
+        <a href="https://github.com/Turab08" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint bounce">↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a game developer focused on building games and learning by doing. Game jams are my favourite way to practice — tight deadlines, creative constraints, and a finished product at the end.</p>
+          <p>I'm currently growing my skills in <span class="accent">C++</span> and game development. I enjoy the problem-solving side of programming and applying it to games.</p>
+          <p>I also teach and mentor. Helping students build their first game is something I genuinely enjoy.</p>
+          <div class="about-roles">
+            <div class="role-badge">▸ Mentor — ADA School Game Dev Club</div>
+            <div class="role-badge">▸ Teaching Assistant — ADA University</div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card"><span class="stat-num" data-target="10">0</span><span class="stat-label">Games Built</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="50">0</span><span class="stat-label">Students Mentored</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="8">0</span><span class="stat-label">Game Jams</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="2">0</span><span class="stat-label">Teaching Roles</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME PROJECTS -->
+  <section id="game-projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Games</h2>
+      <p class="section-sub">Published on itch.io, built during game jams.</p>
+      <div class="cards-grid">
+
+        <div class="game-card">
+          <div class="game-thumb thumb-grave"><img src="images/Screenshot 2025-08-03 205300.png" alt="Eternal Grave" /></div>
+          <div class="card-body">
+            <h2>Eternal Grave</h2>
+            <p>You play as a graveyard worker whose life is repeating again and again. But one time, he wakes up, and everything feels different</p>
+            <div class="card-tags">
+              <span class="tag">Game Jam</span>
+              <span class="tag">Atmospheric</span>
+            </div>
+            <a href="https://jit-games.itch.io/eternal-grave" target="_blank" class="btn btn-primary btn-sm">Play on itch.io</a>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-thumb thumb-proto"><img src="images/Screenshot 2026-01-11 152723.png" alt="Prototype" /></div>
+          <div class="card-body">
+            <h2>Prototype</h2>
+            <p>{Prototype} is a game where each level feels like an upgrade—beginning with basic mechanics and building up into intense, advanced gameplay.</p>
+            <div class="card-tags">
+              <span class="tag">Game Jam</span>
+              <span class="tag">Experimental</span>
+            </div>
+            <a href="https://jit-games.itch.io/prototype" target="_blank" class="btn btn-primary btn-sm">Play on itch.io</a>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-thumb thumb-knd"><img src="images/Kill and Destroy Logo.png" alt="Kill and Destroy" /></div>
+          <div class="card-body">
+            <h2>Kill and Destroy</h2>
+            <p>In this game, you play as a hand that can destroy anything it wants—independently, autonomously, and without external support. Your goal is to destroy all the "Krasiks" in their village.</p>
+            <div class="card-tags">
+              <span class="tag">Game Jam</span>
+              <span class="tag">Action</span>
+            </div>
+            <a href="https://jit-games.itch.io/kill-and-destroy" target="_blank" class="btn btn-primary btn-sm">Play on itch.io</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="section-cta">
+        <a href="https://jit-games.itch.io/" target="_blank" class="btn btn-outline"><i class="fab fa-itch-io"></i> All games on itch.io</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CODE PROJECTS -->
+  <section id="code-projects" class="section">
+    <div class="container">
+      <h2 class="section-title">GitHub</h2>
+      <p class="section-sub">Programming simulations built for the Game Development Fundamentals course at ADA University.</p>
+      <div class="repo-widget">
+        <div class="repo-header">
+          <span class="repo-name"><i class="fab fa-github"></i> Turab08</span>
+          <span class="repo-lang">C#</span>
+        </div>
+        <p>A set of small simulations created for the Game Development Fundamentals course at ADA University. Each one demonstrates a specific concept — physics, game loops, input handling, and basic rendering.</p>
+        <ul class="repo-features">
+          <li>▸ AI using Raycasting</li>
+          <li>▸ Singleton & Observer Patterns</li>
+          <li>▸ Game feel & Audio</li>
+          <li>▸ Interactive demos for students</li>
+        </ul>
+        <div class="card-tags">
+          <span class="tag">C#</span>
+          <span class="tag">Simulation</span>
+          <span class="tag">Education</span>
+        </div>
+        <a href="https://github.com/Turab08" target="_blank" class="btn btn-outline btn-sm" style="align-self:flex-start"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Teaching</h2>
+      <p class="section-sub">Two roles so far, both focused on helping beginners get started with game development.</p>
+      <div class="teaching-grid">
+
+        <div class="teaching-card">
+          <div class="teaching-content">
+            <span class="teaching-badge">School Club</span>
+            <h2>Game Dev Club Mentor</h2>
+            <h4>ADA School</h4>
+            <p>Ran a school game dev club. Organized sessions, helped students understand the basics, and guided them through building their first games.</p>
+            <ul class="teaching-highlights">
+              <li>▸ Designed beginner-friendly sessions</li>
+              <li>▸ From Scratch to GDevelop to Unity</li>
+              <li>▸ Helped students participate in teir first Game Jam</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="teaching-card">
+          <div class="teaching-content">
+            <span class="teaching-badge">University</span>
+            <h2>Teaching Assistant</h2>
+            <h4>Game Development Fundamentals — ADA University</h4>
+            <p>Assisted in a university game dev course. Helped students with debugging, understanding concepts, and working through their projects.</p>
+            <ul class="teaching-highlights">
+              <li>▸ Supported lab sessions</li>
+              <li>▸ Helped students with assignments</li>
+              <li>▸ Developed demo projects for lessons</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3>Programming</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Problem Solving</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Competitive Programming</span><div class="skill-bar"><div class="skill-fill" data-width="58"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Game Development</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Game Design</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Game Jam Development</span><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Simulation Programming</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Other</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Teaching & Mentoring</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Rapid Prototyping</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Feel free to reach out.</p>
+      <div class="contact-grid">
+        <a href="https://github.com/Turab08" target="_blank" class="contact-card">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+          <small>github.com/Turab08</small>
+        </a>
+        <a href="https://jit-games.itch.io/" target="_blank" class="contact-card">
+          <i class="fab fa-itch-io"></i>
+          <span>itch.io</span>
+          <small>jit-games.itch.io</small>
+        </a>
+        <a href="mailto:your@email.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+          <small>turab.violin@gmail.com</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Turab · Game Developer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
